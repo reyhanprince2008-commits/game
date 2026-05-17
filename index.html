@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>NEON FLAP — Reyy Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= BACKGROUND GRID OVERLAY ======= -->
+  <div class="bg-grid"></div>
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- ======= GAME WRAPPER ======= -->
+  <div class="game-wrapper" id="gameWrapper">
+
+    <!-- BRANDING -->
+    <div class="brand-tag">⬡ REYY GAME</div>
+
+    <!-- MUTE BUTTON -->
+    <button class="mute-btn" id="muteBtn" title="Mute/Unmute">
+      <span id="muteIcon">🔊</span>
+    </button>
+
+    <!-- CANVAS -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- ======= START SCREEN ======= -->
+    <div class="screen" id="startScreen">
+      <div class="screen-content">
+        <div class="logo-wrap">
+          <div class="logo-bird">🐦</div>
+          <h1 class="game-title">NEON<br/><span>FLAP</span></h1>
+          <p class="game-subtitle">SURVIVE THE GRID</p>
+        </div>
+        <div class="controls-hint">
+          <span>SPACE / CLICK / TAP</span>
+        </div>
+        <button class="btn btn-start" id="startBtn">▶ MULAI</button>
+        <div class="best-preview" id="startBest">BEST: <span id="startBestScore">0</span></div>
+      </div>
+    </div>
+
+    <!-- ======= GAME OVER SCREEN ======= -->
+    <div class="screen hidden" id="gameOverScreen">
+      <div class="screen-content">
+        <div class="game-over-title">GAME OVER</div>
+        <div class="score-panel">
+          <div class="score-row">
+            <span class="score-label">SKOR</span>
+            <span class="score-value" id="finalScore">0</span>
+          </div>
+          <div class="score-divider"></div>
+          <div class="score-row">
+            <span class="score-label">BEST</span>
+            <span class="score-value best-val" id="bestScore">0</span>
+          </div>
+        </div>
+        <button class="btn btn-restart" id="restartBtn">↺ MAIN LAGI</button>
+      </div>
+    </div>
+
+    <!-- ======= HUD (in-game) ======= -->
+    <div class="hud hidden" id="hud">
+      <div class="hud-score" id="hudScore">0</div>
+      <button class="btn-pause" id="pauseBtn">⏸</button>
+    </div>
+
+    <!-- ======= PAUSE SCREEN ======= -->
+    <div class="screen hidden" id="pauseScreen">
+      <div class="screen-content">
+        <div class="pause-title">⏸ PAUSED</div>
+        <button class="btn btn-resume" id="resumeBtn">▶ LANJUTKAN</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ======= MOBILE JUMP ZONE ======= -->
+  <div class="mobile-jump-zone" id="mobileJump">
+    <button class="btn-jump" id="jumpBtn">
+      <span class="jump-icon">▲</span>
+      <span class="jump-label">LOMPAT</span>
+    </button>
+  </div>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="site-footer">
+    <span>⬡ REYY GAME &nbsp;·&nbsp; Neon Flap v1.0</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
